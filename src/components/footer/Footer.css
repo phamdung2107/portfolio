@@ -1,0 +1,63 @@
+.footer {
+  background-color: rgb(54 82 95);
+  padding: 10px 20px;
+  z-index: 100;
+}
+
+.icon {
+  position: relative;
+  display: flex;
+  z-index: 2;
+  margin: 10px 0;
+}
+.icon li {
+  position: relative;
+  list-style: none;
+  overflow: initial;
+  margin: 0 5px;
+}
+
+.icon li a {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5em;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 1px 9px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.icon li a:hover {
+  transform: translateY(-4px);
+}
+.icon li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: skewX(45deg) translateX(55px);
+  transition: 0.5s;
+}
+.icon li a:hover::before {
+  transform: skewX(45deg) translateX(-55px);
+}
+
+@media only screen and (max-width: 768px) {
+  .icon li a {
+    width: 35px;
+    height: 35px;
+  }
+}

@@ -1,0 +1,85 @@
+.about {
+  background: rgba(37, 10, 10, 0.5);
+}
+img.about__img {
+  border-radius: 10px;
+  width: 100%;
+}
+h1.about__heading {
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-align: start;
+  font-family: Montserrat, sans-serif;
+  font-size: 60px;
+}
+button.about.btn.pointer {
+  text-transform: capitalize;
+  width: 195px;
+  height: 55px;
+  font-size: 18px;
+  transition: 0.4s ease;
+}
+.about__button {
+  padding: 20px 0px;
+}
+
+.info-value {
+  margin: 10px 0px;
+}
+
+.info-value li {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 50px 100px auto[col3-start];
+  justify-items: start;
+  align-items: center;
+}
+
+.info-value li i {
+  margin-right: 10px;
+  font-size: 25px;
+}
+
+.info-value li div {
+  font-size: 18px;
+  font-family: Montserrat;
+}
+.info-value .left {
+  position: relative;
+}
+.info-value li div a {
+  text-decoration: none;
+  color: black;
+}
+
+.info-value .left::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  transition: all 0.6s ease-in-out;
+}
+.info-value .left:hover:before {
+  visibility: visible;
+  width: 100%;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1024px) {
+  .p__color {
+    font-size: 15px !important;
+  }
+}
+@media only screen and (max-width: 425px) {
+  button.about.btn.pointer {
+    text-transform: capitalize;
+    width: 105px;
+    height: 50px;
+    font-size: 13px;
+    transition: 0.4s ease;
+  }
+}
